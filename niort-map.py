@@ -17,11 +17,7 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 pd.options.mode.chained_assignment = None  # standard value is "warn"
 
 import os, time, json
-from tqdm import tqdm
-from py2neo import Graph
 
-# from loguru import logger
-# https://github.com/Delgan/loguru ?
 import logging
 from streamlit.logger import get_logger
 class StreamlitHandler(logging.Handler):
@@ -37,21 +33,10 @@ logger = get_logger(__name__)
 logger.handlers = [StreamlitHandler()]
 logger.setLevel(logging.INFO)
 
-# *************************************************************************************************************************
+# ******************************* LOAD DATA*****************************************************************
 
-# basic data
-sheet_url = "https://docs.google.com/spreadsheets/d/19uUtffNcSeYXw7kkocArkbfn_mRmTSsivpXUqkNo0-Y"
-sheet_name = "persons_play"  # persons play contains "allegiation mood"
 
-#data = d.load_df_from_gsheet("niort_projection", sheet_url, sheet_name, cleanByColumn="uuid", clean=True, fillna=True, )
 data = pd.read_csv("Niort projections from ddb1-_neo4j - persons_play.csv")
-
-# suspect
-sheet_url = "https://docs.google.com/spreadsheets/d/19uUtffNcSeYXw7kkocArkbfn_mRmTSsivpXUqkNo0-Y"
-sheet_name = "persons_play_suspects"  # persons play contains "allegiation mood"
-
-#data_suspects = d.load_df_from_gsheet("niort_projection", sheet_url, sheet_name, cleanByColumn="uuid", clean=True, fillna=True, )
-
 data_suspects = pd.read_csv("Niort projections from ddb1-_neo4j - persons_play_suspects.csv")
 
 
@@ -61,6 +46,9 @@ data_suspects = data_suspects.astype(str)
 #st.dataframe(data)
 #st.dataframe(data_suspects)
 #st.stop()
+
+
+################################# DATA PREP #################################################################
 
 def create_apattern(row, n):
     apattern = ""
