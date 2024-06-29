@@ -1,5 +1,7 @@
 #  Map visualisation of the trial against Bernard Niort (1234-1235)
 
+WORK IN PROGRESS
+
 Part of the talk "The Heresy Trial of Bernard-Othon de Niort and His Family, c. 1234-1235:
  Computing Discourses of Guilt at the Dawn of the Languedocian Inquisition" by
  Robert L.J. Shaw,Robert L. J. Shaw, Katalin Suba, Tomáš Hampejs, and David Zbíral
