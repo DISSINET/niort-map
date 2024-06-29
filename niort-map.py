@@ -180,7 +180,7 @@ Contact person: robert.shaw@mail.muni.cz
     st.write("## Details")
     col11, col22 = st.columns([10,1])
     with col11:
-        show_responses = st.checkbox("Show charge responses", value=True)
+        show_responses = st.checkbox("Show charge responses", value=False)
     with col22:
         show_dev = st.checkbox("[Show DEV info]", value=False)
 
