@@ -5,12 +5,13 @@ Part of the talk "The Heresy Trial of Bernard-Othon de Niort and His Family, c. 
  Robert L.J. Shaw,Robert L. J. Shaw, Katalin Suba, Tomáš Hampejs, and David Zbíral
 
 
-Created within DISSINET Project,  https://dissinet.cz
+Created within the DISSINET Project,  https://dissinet.cz
 
 Please do not cite, or reuse without explicit permission.
 Contact person: robert.shaw@mail.muni.cz
 
 ---------
 
+Script is written to run as a Streamlit app.
 
 
