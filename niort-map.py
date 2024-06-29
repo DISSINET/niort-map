@@ -3,8 +3,6 @@ import os, socket
 import re
 import streamlit as st
 import sys
-from dotenv import load_dotenv
-
 
 import pickle
 
